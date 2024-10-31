@@ -14,7 +14,7 @@ import LihatKamarPage from '../pages/Admin/LihatKamar';
 
 function AppRouter() {
   return (
-    <Router>
+    <Router  basename="/villatiarasarangan">
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/tentang-villa" element={<TentangDetail />} />

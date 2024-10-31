@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/villatiarasarangan/static/css/main.1c6621a1.css",
+    "main.js": "/villatiarasarangan/static/js/main.4c91c783.js",
+    "static/media/kamar.JPG": "/villatiarasarangan/static/media/kamar.2796c26171f2967f0e31.JPG",
+    "index.html": "/villatiarasarangan/index.html",
+    "main.1c6621a1.css.map": "/villatiarasarangan/static/css/main.1c6621a1.css.map",
+    "main.4c91c783.js.map": "/villatiarasarangan/static/js/main.4c91c783.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c6621a1.css",
+    "static/js/main.4c91c783.js"
+  ]
+}

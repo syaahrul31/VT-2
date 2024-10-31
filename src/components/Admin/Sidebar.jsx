@@ -1,7 +1,15 @@
 import { FaTachometerAlt, FaCalendarAlt, FaBed, FaBook, FaFileAlt, FaSignOutAlt, FaChevronDown } from 'react-icons/fa';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+     
+    // Fungsi untuk toggle menu mobile
+    const handleMenuToggle = () => {
+        setIsMobileMenuOpen((prevState) => !prevState);
+    };
+        
     const toggleDropdown = (id) => {
         const menu = document.getElementById(id);
         menu.classList.toggle('hidden');
@@ -9,7 +17,7 @@ function Sidebar() {
 
     return (
         <>
-            <aside id="sidebar" className="fixed inset-y-0 left-0 w-64 bg-gradient-to-b from-red-700 to-orange-700 text-white h-screen transition-transform transform -translate-x-full md:translate-x-0">
+            <aside id="sidebar" className={`fixed inset-y-0 left-0 w-64 bg-gradient-to-b from-red-700 to-orange-700 text-white h-screen transition-transform transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <h1 className="logo text-3xl font-bold px-6 mb-4 pt-6">Villa Tiara</h1>
                 <div className="flex items-center p-6 bg-orange-600">
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" className="w-10 h-10 rounded-full" alt="Admin" />
@@ -82,7 +90,7 @@ function Sidebar() {
             </aside>
             <nav className="fixed md:hidden p-4 top-0 left-0 right-0 bg-gradient-to-br from-red-700 to-orange-700 flex justify-between items-center z-50">
                 <div className="logo text-white px-4 text-2xl font-bold">Villa Tiara</div>
-                <button id="menu-toggle" className="text-2xl text-white p-2 rounded-md focus:outline-none">
+                <button id="menu-toggle" onClick={handleMenuToggle} className="text-2xl text-white p-2 rounded-md focus:outline-none">
                     ☰
                 </button>
             </nav>

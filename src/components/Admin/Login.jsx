@@ -1,7 +1,7 @@
 import { FaUser, FaLock, FaSignInAlt, FaArrowLeft } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Login() {
+function Masuk() {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -92,4 +92,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Masuk;

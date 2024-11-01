@@ -9,6 +9,10 @@
 
 @import 'react-photo-view/dist/react-photo-view.css';
 
+body{
+  background-color:#EBEBEB;
+}
+
 .gambar{
     background-image: url('https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10011479-9fc40c87b7c08e70296547d0c97dc3cd.jpeg');
 }

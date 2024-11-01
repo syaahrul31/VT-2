@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
-import { PhotoProvider, PhotoView } from 'react-photo-view'; // Import Lightbox components
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 function Galeri() {
   const images = [
@@ -13,37 +12,48 @@ function Galeri() {
   ];
 
   return (
-    <div className="px-5 md:px-20 mb-16">
-      <section className="text-center mb-4">
-        <h1 className="text-3xl md:text-5xl font-bold">Gallery</h1>
-        <p className="text-gray-700 text-xl py-6">
-          Temukan spot menarik di setiap sudut Villa Tiara Sarangan
-        </p>
-      </section>
-
-      {/* PhotoProvider untuk Lightbox */}
-      <PhotoProvider>
-        <section className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
-          {images.map((src, index) => (
-            <PhotoView key={index} src={src}>
-              <img
-                className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:scale-105"
-                src={src}
-                alt={`Villa ${index + 1}`}
-              />
-            </PhotoView>
-          ))}
+    <div className="bg-white">
+      <div className="container mx-auto px-5 md:px-20 py-16 ">
+        <section className="text-center mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold">Gallery</h1>
+          <p className="text-gray-700 text-md py-6">
+            Temukan spot menarik di setiap sudut Villa Tiara Sarangan
+          </p>
         </section>
-      </PhotoProvider>
-
-      <div className="text-center">
-        <Link
-          to="/galeri"
-          className="inline-flex items-center text-lg font-semibold py-2 px-4 bg-red-600 text-white rounded-lg shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:-translate-y-1"
-        >
-          <span>Selengkapnya</span>
-          <FaArrowRight className="ml-2" />
-        </Link>
+        {/* PhotoProvider untuk Lightbox */}
+        <PhotoProvider>
+          <section className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {images.map((src, index) => (
+              index === images.length - 1 ? (
+                <div key={index} className="relative">
+                  <Link to="/more-gallery">
+                    <img
+                      className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer"
+                      src={src}
+                      alt={`Villa ${index + 1}`}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center rounded-lg">
+                      <span className="text-white text-xl font-bold">View More</span>
+                    </div>
+                  </Link>
+                </div>
+              ) : (
+                <PhotoView key={index} src={src}>
+                  <div className="relative group">
+                    <img
+                      className="w-full h-64 object-cover rounded-lg shadow-md cursor-pointer transition-all duration-300 group-hover:bg-black group-hover:bg-opacity-40"
+                      src={src}
+                      alt={`Villa ${index + 1}`}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center rounded-lg transition-opacity duration-300">
+                      <span className="text-white text-lg opacity-0 group-hover:opacity-100 font-bold"></span>
+                    </div>
+                  </div>
+                </PhotoView>
+              )
+            ))}
+          </section>
+        </PhotoProvider>
       </div>
     </div>
   );

@@ -3,10 +3,10 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Artikel() {
   return (
-    <div className="px-5 md:px-20 py-12 bg-gray-100 mb-20">
+    <div className="container mx-auto px-5 md:px-20 py-16">
       <section className="text-center mb-4">
         <h1 className="text-3xl md:text-5xl font-bold">Artikel</h1>
-        <p className="text-gray-700 text-xl py-6">Temukan informasi menarik seputar wisata di Telaga Sarangan</p>
+        <p className="text-gray-700 text-md py-6">Temukan informasi menarik seputar wisata di Telaga Sarangan</p>
       </section>
       {/* Grid untuk blog posts */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">

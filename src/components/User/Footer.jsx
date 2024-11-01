@@ -8,10 +8,10 @@ function Footer() {
       <div className="container mx-auto px-5 md:px-20">
         {/* Section CTA */}
         <div className="bg-white text-black rounded-lg p-6 mb-10 flex flex-col md:flex-row items-center justify-between">
-          <h2 className="text-xl md:text-2xl font-semibold text-center md:text-left mb-4 md:mb-0">
-            Punya kebutuhan pembuatan packaging custom? <br />
-            Konsultasikan sekarang bersama kami!
-          </h2>
+        <h2 className="text-lg md:text-xl font-semibold text-center md:text-left mb-4 md:mb-0">
+          Ingin pengalaman menginap yang tak terlupakan? <br />
+          Konsultasikan kebutuhan akomodasi Anda sekarang juga!
+        </h2>
           <a
             href="https://wa.me/1234567890"
             className="bg-green-500 text-white px-6 py-2 rounded-md text-lg hover:bg-green-400 transition duration-300"
@@ -24,7 +24,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-8 gap-10 mb-10">
           {/* Column 1 - logo/deskripsi */}
           <div className='col-span-2'>
-            <h1 id="logo" className="text-3xl md:text-4xl items-center justify-center font-medium transition-colors text-white mb-3">
+            <h1 className="logo text-3xl md:text-4xl items-center justify-center font-medium transition-colors text-white mb-3">
               Villa Tiara
             </h1>
             <p className='mb-6'>Villa Tiara Sarangan menawarkan pengalaman menginap nyaman dan mewah, sejalan dengan keindahan Telaga Sarangan.</p>

@@ -1,7 +1,7 @@
 import UserLayout from '../../layouts/UserLayout';
 import Jumbotron from '../../components/User/Jumbotron';
 import Highlights from '../../components/User/Highlights';
-import Slider from '../../components/User/Slider';
+import Fasilitas from '../../components/User/Fasilitas';
 import TipeKamar from '../../components/User/TipeKamar';
 import Tentang from '../../components/User/Tentang';
 import Testimoni from '../../components/User/Testimoni';
@@ -26,7 +26,7 @@ function Beranda() {
           <TipeKamar />
         </div>
         <div id="fasilitas">
-          <Slider />
+          <Fasilitas />
         </div>
         <div id="galeri">
           <Galeri />

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const menuItems = [
   { name: 'Beranda', target: 'beranda' },
-  { name: 'Tentang Kami', target: 'tentang' },
+  { name: 'Tentang', target: 'tentang' },
   { name: 'Tipe Kamar', target: 'tipe-kamar' },
   { name: 'Fasilitas', target: 'fasilitas' },
   { name: 'Galeri', target: 'galeri' },
@@ -38,16 +39,49 @@ function Navbar() {
   return (
     <header
       id="navbar"
-      className={`fixed left-0 right-0 z-10 transition-all duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-10 transition-all duration-300 ${
         scrolled
-          ? 'bg-white bg-opacity-100 top-0 text-black shadow-lg'
-          : 'bg-black bg-opacity-30 top-7 md:top-8 text-white'
+          ? 'bg-white bg-opacity-100 text-black shadow-lg'
+          : 'bg-opacity-0 text-white'
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center py-3 px-10 md:py-3 md:px-5">
+      <div className={`space-x-4 bg-black bg-opacity-40 text-white text-sm transition-all duration-300 ${
+        scrolled ? 'hidden py-2' : 'flex py-4'}`}>
+        <div className="container mx-auto md:px-4 flex md:justify-between justify-center">
+          <div className="flex space-x-5 items-center">
+            <a href="https://maps.app.goo.gl/jC6gnaMxtjUnpU8q9" target="_blank" className="hidden md:flex items-center hover:text-yellow-300" title="Location">
+              <FaMapMarkerAlt className="mr-2 text-red-500" />
+              <span>No. 193, Jl, Raya Telaga Sarangan 63361 Magetan</span>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" className="flex items-center hover:text-yellow-300" title="WhatsApp">
+              <FaPhoneAlt className="mr-2  text-red-500" />
+              <span>0831-2760-5430</span>
+            </a>
+            <a href="mailto:email@example.com" target="_blank" className="flex items-center hover:text-yellow-300" title="Email">
+              <FaEnvelope className="mr-2  text-red-500" />
+              <span>villatiara@gmail.com</span>
+            </a>
+          </div>
+          <div className="hidden md:flex space-x-4 items-center">
+            <a href="https://instagram.com/villatiara.sarangan" target="_blank" className="hover:text-yellow-300" title="Instagram">
+              <FaInstagram className="mr-2" />
+            </a>
+            <a href="https://x.com/@username" target="_blank" className="hover:text-yellow-300" title="X">
+              <FaTwitter className="mr-2" />
+            </a>
+            <a href="https://tiktok.com/@tiarasarangan" target="_blank" className="hover:text-yellow-300" title="TikTok">
+              <FaTiktok className="mr-2" />
+            </a>
+            <a href="https://youtube.com/c/username" target="_blank" className="hover:text-yellow-300" title="YouTube">
+              <FaYoutube className="mr-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto flex justify-between items-center py-4 px-10">
         <h1
           id="logo"
-          className={`logo text-3xl md:text-4xl items-center justify-center font-medium transition-colors ${
+          className={`logo text-3xl md:text-4xl mt-1 items-center justify-center ${
             scrolled ? 'text-red-700' : 'text-white'
           }`}
         >
@@ -69,7 +103,7 @@ function Navbar() {
                   to={item.target}
                   smooth={true}
                   duration={500}
-                  className="hover:text-yellow-600 cursor-pointer"
+                  className="hover:text-yellow-300 cursor-pointer"
                 >
                   {item.name}
                 </Link>
@@ -99,7 +133,7 @@ function Navbar() {
                 to={item.target}
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-600 cursor-pointer"
+                className="hover:text-yellow-300 hover:text-xl cursor-pointer"
               >
                 {item.name}
               </Link>

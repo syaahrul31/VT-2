@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -132,14 +133,18 @@ function Navbar() {
         </div>
       </div>
       <div className="container mx-auto flex justify-between items-center py-4 px-10">
-        <h1
-          id="logo"
-          className={`logo text-3xl md:text-4xl mt-1 items-center justify-center ${
-            scrolled ? 'text-red-700' : 'text-white'
-          }`}
-        >
-          Villa Tiara
-        </h1>
+        <RouterLink to="/login-page">
+          {' '}
+          <h1
+            id="logo"
+            className={`logo text-3xl md:text-4xl mt-1 items-center justify-center ${
+              scrolled ? 'text-red-700' : 'text-white'
+            }`}
+          >
+            Villa Tiara
+          </h1>
+        </RouterLink>
+
         <nav>
           <button
             id="menu-toggle"

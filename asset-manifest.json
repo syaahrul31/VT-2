@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/villatiarasarangan/static/css/main.96304860.css",
-    "main.js": "/villatiarasarangan/static/js/main.5198105c.js",
+    "main.js": "/villatiarasarangan/static/js/main.567a1e9c.js",
     "static/media/Standart.JPG": "/villatiarasarangan/static/media/Standart.dbf30ea270abce88b709.JPG",
     "static/media/Deluxe.JPG": "/villatiarasarangan/static/media/Deluxe.5e8a0a3fe9e992925e57.JPG",
     "static/media/Family.JPG": "/villatiarasarangan/static/media/Family.6221a9174cca6c10308b.JPG",
     "index.html": "/villatiarasarangan/index.html",
     "main.96304860.css.map": "/villatiarasarangan/static/css/main.96304860.css.map",
-    "main.5198105c.js.map": "/villatiarasarangan/static/js/main.5198105c.js.map"
+    "main.567a1e9c.js.map": "/villatiarasarangan/static/js/main.567a1e9c.js.map"
   },
   "entrypoints": [
     "static/css/main.96304860.css",
-    "static/js/main.5198105c.js"
+    "static/js/main.567a1e9c.js"
   ]
 }

@@ -5,7 +5,7 @@ function GalleryDetail() {
   return (
     <>
       <UserLayout>
-        <Galeri/>
+        <Galeri />
       </UserLayout>
     </>
   );

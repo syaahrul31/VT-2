@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter, FaTiktok, FaYoutube } from 'react-icons/fa';
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaInstagram,
+  FaTwitter,
+  FaTiktok,
+  FaYoutube,
+} from 'react-icons/fa';
 
 const menuItems = [
   { name: 'Beranda', target: 'beranda' },
@@ -45,34 +53,79 @@ function Navbar() {
           : 'bg-opacity-0 text-white'
       }`}
     >
-      <div className={`space-x-4 bg-black bg-opacity-40 text-white text-sm transition-all duration-300 ${
-        scrolled ? 'hidden py-2' : 'flex py-4'}`}>
+      <div
+        className={`space-x-4 bg-black bg-opacity-40 text-white text-sm transition-all duration-300 ${
+          scrolled ? 'hidden py-2' : 'flex py-4'
+        }`}
+      >
         <div className="container mx-auto md:px-4 flex md:justify-between justify-center">
           <div className="flex space-x-5 items-center">
-            <a href="https://maps.app.goo.gl/jC6gnaMxtjUnpU8q9" target="_blank" className="hidden md:flex items-center hover:text-yellow-300" title="Location">
+            <a
+              href="https://maps.app.goo.gl/jC6gnaMxtjUnpU8q9"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:flex items-center hover:text-yellow-300"
+              title="Location"
+            >
               <FaMapMarkerAlt className="mr-2 text-red-500" />
               <span>No. 193, Jl, Raya Telaga Sarangan 63361 Magetan</span>
             </a>
-            <a href="https://wa.me/6281234567890" target="_blank" className="flex items-center hover:text-yellow-300" title="WhatsApp">
+            <a
+              href="https://wa.me/6281234567890"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center hover:text-yellow-300"
+              title="WhatsApp"
+            >
               <FaPhoneAlt className="mr-2  text-red-500" />
               <span>0831-2760-5430</span>
             </a>
-            <a href="mailto:email@example.com" target="_blank" className="flex items-center hover:text-yellow-300" title="Email">
+            <a
+              href="mailto:email@example.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center hover:text-yellow-300"
+              title="Email"
+            >
               <FaEnvelope className="mr-2  text-red-500" />
               <span>villatiara@gmail.com</span>
             </a>
           </div>
           <div className="hidden md:flex space-x-4 items-center">
-            <a href="https://instagram.com/villatiara.sarangan" target="_blank" className="hover:text-yellow-300" title="Instagram">
+            <a
+              href="https://instagram.com/villatiara.sarangan"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300"
+              title="Instagram"
+            >
               <FaInstagram className="mr-2" />
             </a>
-            <a href="https://x.com/@username" target="_blank" className="hover:text-yellow-300" title="X">
+            <a
+              href="https://x.com/@username"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300"
+              title="X"
+            >
               <FaTwitter className="mr-2" />
             </a>
-            <a href="https://tiktok.com/@tiarasarangan" target="_blank" className="hover:text-yellow-300" title="TikTok">
+            <a
+              href="https://tiktok.com/@tiarasarangan"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300"
+              title="TikTok"
+            >
               <FaTiktok className="mr-2" />
             </a>
-            <a href="https://youtube.com/c/username" target="_blank" className="hover:text-yellow-300" title="YouTube">
+            <a
+              href="https://youtube.com/c/username"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300"
+              title="YouTube"
+            >
               <FaYoutube className="mr-2" />
             </a>
           </div>

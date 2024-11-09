@@ -5,7 +5,7 @@ function TipeKamarDetail() {
   return (
     <>
       <UserLayout>
-        <TipeKamar/>
+        <TipeKamar />
       </UserLayout>
     </>
   );

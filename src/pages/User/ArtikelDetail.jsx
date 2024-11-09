@@ -5,7 +5,7 @@ function ArtikelDetail() {
   return (
     <>
       <UserLayout>
-        <Artikel/>
+        <Artikel />
       </UserLayout>
     </>
   );

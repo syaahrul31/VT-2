@@ -1,12 +1,12 @@
-import AdminLayout from "../../layouts/AdminLayout";
-import AddTamu from "../../components/Admin/AddTamu";
+import AdminLayout from '../../layouts/AdminLayout';
+import TambahTamu from '../../components/Admin/TambahTamu';
 
 function TambahTamuPage() {
   return (
     <>
-    <AdminLayout>
-        <AddTamu/>
-    </AdminLayout>
+      <AdminLayout>
+        <TambahTamu />
+      </AdminLayout>
     </>
   );
 }

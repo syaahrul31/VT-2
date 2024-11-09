@@ -9,66 +9,71 @@
 
 @import 'react-photo-view/dist/react-photo-view.css';
 
-body{
-  background-color:#EBEBEB;
+body {
+  background-color: #ebebeb;
 }
 
-.gambar{
-    background-image: url('https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10011479-9fc40c87b7c08e70296547d0c97dc3cd.jpeg');
+.gambar,
+.gambar.bg-loaded {
+  background-image: url('https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10011479-9fc40c87b7c08e70296547d0c97dc3cd.jpeg');
 }
 
-.pattern{
-    background-image: url('https://i.pinimg.com/originals/bc/fa/27/bcfa277eaa73a8981aa411fcb7633c8d.jpg');
+.pattern {
+  background-image: url('https://i.pinimg.com/originals/bc/fa/27/bcfa277eaa73a8981aa411fcb7633c8d.jpg');
 }
 
-.tinggi{
-    height:750px;
+.tinggi {
+  height: 750px;
 }
 
-.atas{
-    margin-top:-140px;
+.atas {
+  margin-top: -140px;
 }
 
 .logo {
-  font-family: 'Brush Script Std', cursive;
+  font-family: 'Brush Script MT', cursive;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: #ff5f29;
   padding: 20px;
   font-weight: bolder;
   border: 5px solid #ff5f29;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
   background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
 }
 
 /*===============================================*/
 
-#sidebar{
-    z-index:50;
+#sidebar {
+  z-index: 50;
 }
 
 /* Animasi kecil pada form */
 .input-container {
-    position: relative;
-    z-index:0;
+  position: relative;
+  z-index: 0;
 }
 
 .input-container input:focus ~ label,
 .input-container textarea:focus ~ label,
 .input-container input:not(:placeholder-shown) ~ label,
 .input-container select:focus ~ label {
-    transform: translateY(-1.5rem);
-    font-size: 0.875rem;
-    color: #f59e0b;
-    background-color: white;
-    padding: 0px 7px 0px 7px;
+  transform: translateY(-1.5rem);
+  font-size: 0.875rem;
+  color: #f59e0b;
+  background-color: white;
+  padding: 0px 7px 0px 7px;
 }
 
 /*===============================================*/
@@ -76,68 +81,69 @@ body{
 /* tabel */
 /* Container tabel dengan overflow scroll */
 .container-tabel {
-    overflow-x: auto;
-    max-width: 100%; 
-    margin-bottom: 1rem; 
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
 }
 
 /* Mencegah kolom menyusut terlalu kecil */
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 /* Membuat konten tetap dalam satu baris */
-th, td {
-    white-space: nowrap;
-    text-align: center;
+th,
+td {
+  white-space: nowrap;
+  text-align: center;
 }
 
 /* Styling untuk tombol */
 button {
-    transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /*===============================================*/
 
 .flip-card {
-    perspective: 1000px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 230px; /* Sesuaikan tinggi agar proporsional */
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flip-card-back {
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 230px; /* Sesuaikan tinggi agar proporsional */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

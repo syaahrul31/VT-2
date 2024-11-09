@@ -1,9 +1,9 @@
-import Masuk from "../../components/Admin/Login";
+import FormLogin from '../../components/Admin/FormLogin';
 
 function LoginPage() {
   return (
     <>
-    <Masuk/>
+      <FormLogin />
     </>
   );
 }
